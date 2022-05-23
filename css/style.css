@@ -1,0 +1,146 @@
+/*---------------------------------------*\
+  $Variables
+\*---------------------------------------*/
+:root {
+  /* Color palette */
+  --color-first: #f44336;
+  --color-second: #c62828;
+  --color-accent: #ffc400;
+  --color-bg: #ffebee;
+  --color-text: #263238;
+  
+  /* Filters | Color palette */
+  --color-filter-first: invert(34%) sepia(84%) saturate(2973%) hue-rotate(343deg) brightness(99%) contrast(93%);
+  --color-filter-second: invert(27%) sepia(29%) saturate(6263%) hue-rotate(347deg) brightness(81%) contrast(88%);
+  --color-filter-accent: invert(70%) sepia(88%) saturate(1174%) hue-rotate(360deg) brightness(103%) contrast(104%);
+  --color-filter-bg: invert(100%) sepia(21%) saturate(3874%) hue-rotate(288deg) brightness(104%) contrast(109%);
+  --color-filter-text: invert(15%) sepia(36%) saturate(332%) hue-rotate(155deg) brightness(97%) contrast(91%);
+}
+:root {
+  /* Typography */
+  --font-title: 'Rowdies', sans-serif;
+  --font-content: 'Rubik', sans-serif;
+  --h1-font-size: 1.95rem;
+  --h2-font-size: 1.56rem;
+  --h3-font-size: 1.25rem;
+  --body-font-size: 1rem;
+  --smaller-font-size: .8rem;
+  --small-font-size: .64rem;
+}
+:root {
+  /* Layout */
+  --header-height: 3rem;
+  --max-width: 64rem; /* 1024px */
+  --gutter: 1rem;
+  --border-radius: 1rem;
+}
+:root {
+  --opacity: .95;
+
+  /* Shadow */
+  --shadow-opacity: .1;
+  --shadow-move-y: .3em;
+  --shadow-move-x: .05em;
+  --shadow-blur: calc(var(--shadow-move-y));
+  --box-shadow: rgba(0, 0, 0, var(--shadow-opacity)) var(--shadow-move-x) var(--shadow-move-y) var(--shadow-blur);
+}
+
+
+/*---------------------------------------*\
+  $Base
+\*---------------------------------------*/
+*,
+*::after,
+*::before { box-sizing: border-box; }
+body {
+  font-size: var(--body-font-size);
+  font-family: var(--font-content);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+a { 
+  color: var(--color-accent);
+  text-decoration: none; 
+}
+h1 {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+h2,
+h3,
+h4,
+h5,
+h6 { 
+  margin-top: 1.5em;
+  margin-bottom: .5em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { 
+  font-family: var(--font-title); 
+}
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: var(--font-content);
+}
+h1 { font-size: var(--h1-font-size); }
+h2 { font-size: var(--h2-font-size); }
+h3 { font-size: var(--h3-font-size); }
+
+
+/*---------------------------------------*\
+  $Icons
+\*---------------------------------------*/
+[class*=icon-] {
+  display: flex;
+  align-items: center;
+}
+[class*=icon-]::before {
+  --width: 1.5em;
+  content: "";
+  display: inline-block;
+  margin-right: .4em;
+  background-repeat: no-repeat;
+  width: var(--width);
+  height: var(--width);
+  filter: var(--color-filter-text);
+}
+/* .icon-example::before {
+  content: "";
+  background-image: url("../icons/icon-example.svg");
+} */
+
+
+/*---------------------------------------*\
+  $Layout
+\*---------------------------------------*/
+.l-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: var(--max-width);
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.l-section {
+  margin-bottom: 2rem;
+}
+.center-block {
+  margin-left: auto;
+  margin-right: auto;
+}
+.center-content { 
+  text-align: center;
+}
