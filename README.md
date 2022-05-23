@@ -100,27 +100,31 @@ Hacer una petición aun endpoint como este sin ningun parametro extra como un ID
 Este endpoint aparte de traer la lista de 20 Pokemon dentro del atributo `results: [] 20 items`, también devuelve la info. que nos permitira crear la páginación (`next` y `previous`) de nuestro proyecto.
 
 ```json
-count: 1126
-next: "https://pokeapi.co/api/v2/ability/?limit=20&offset=20"
-previous: null
-🔽 results: [] 20 items
-  🔽 0: {} 2 keys
-    name: "bulbasaur"
-    url: "https://pokeapi.co/api/v2/pokemon/1/"
-  🔽 1: {} 2 keys
-    name: "ivysaur"
-    url: "https://pokeapi.co/api/v2/pokemon/2/"
-  ▶️ 2: {} 2 keys
-  ▶️ 3: {} 2 keys
-  ...
-  ▶️ 18: {} 2 keys
-  ▶️ 19: {} 2 keys
-    name: "raticate"
-    url: "https://pokeapi.co/api/v2/pokemon/20/"
+{
+  "count": 1126,
+  "next": "https://pokeapi.co/api/v2/ability/?limit=20&offset=20",
+  "previous": null,
+  "results": [
+    {
+      "name": "bulbasaur",
+      "url": "https://pokeapi.co/api/v2/pokemon/1/",
+    },
+    {
+      "name": "ivysaur",
+      "url": "https://pokeapi.co/api/v2/pokemon/2/",
+    },
+    {
+      "name": "venusaur",
+      "url": "https://pokeapi.co/api/v2/pokemon/3/"
+    }
+  ]
+}
 ```
 
+**Obviamente la API te va devolver más de tres Pokemon, yo lo hago así a modo de ejemplo.**
+
 ### Pokemon (endpoint)
-**`GET`** https://pokeapi.co/api/v2/pokemon/`{id o name}`
+**`GET`** pokeapi.example/api/v2/pokemon/**{id o name}**
 
 Hacer una petición de este estilo y pasarle como paremetro un ID (número) o el nombre del Pokemon devolvera data sobre un Pokemon especifico.
 
@@ -129,76 +133,83 @@ Hacer una petición de este estilo y pasarle como paremetro un ID (número) o el
 - Por ID https://pokeapi.co/api/v2/pokemon/25
 
 ```json
-▶️ abilities: [] 2 items
-base_experience: 112
-▶️ forms: [] 1 item
-▶️ game_indices: [] 2 items
-height:4
-▶️ held_items: [] 2 items
-id: 25
-name: 'pikachu'
-order: 35
-peso :75
-location_area_encounters:"https://pokeapi.co/api/v2/pokemon/25/encounters"
-▶️ moves: [] 96 items
-name: "pikachu"
-order: 35
-past_types: [] 0 items
-▶️ species: {} 2 keys
-▶️ sprites: {} 10 keys
-▶️ stats: [] 6 items
-▶️ types: [] 1 item
-weight: 60
+{
+  "abilities": [],
+  "base_experience": 112,
+  "forms": [],
+  "game_indices": [],
+  "height": 4,
+  "held_items": [],
+  "id": 25,
+  "is_default": true,
+  "location_area_encounters": "https://pokeapi.co/api/v2/pokemon/25/encounters",
+  "moves": [],
+  "name": "pikachu",
+  "order": 35,
+  "past_types": [],
+  "species": {},
+  "sprites": {},
+  "stats": [],
+  "types": [],
+  "weight": 60
+}
 ```
-
+**Obviamente la API te va devolver más información, yo lo hago así a modo de ejemplo.**
 ### Type (endpoint)
 
-**`GET`** https://pokeapi.co/api/v2/type
+**`GET`** pokeapi.co/api/v2/type
 
-Hacer una petición de este estilo sin parametros adicionales devolvera una lista con la cantidad de tipos de Pokemon que existen. 
+Hacer una petición de este estilo sin parametros adicionales devolvera una lista de tipos de Pokemon, es decir, comenzando con los de tipo normal y terminando con los de tipo shadow. 
 
 Adicionalmente la respuesta de este enpoint ademas de proporcionarnos el nombre del tipo, proporcionara una URL para consultar los Pokemon por su tipo.
 
 ```json
-count: 20
-next: null
-previous: null
-🔽 results: [] 20 items
-  🔽 0: {} 2 keys
-    name: "normal"
-    url: "https://pokeapi.co/api/v2/type/1/"
-  🔽 1: {} 2 keys
-    name: "fighting"
-    url: "https://pokeapi.co/api/v2/type/2/"
-  ▶️ 2: {} 2 keys
-  ▶️ 3: {} 2 keys
-  ...
-  ▶️ 18: {} 2 keys
-  ▶️ 19: {} 2 keys
-    name: "shadow"
-    url: "https://pokeapi.co/api/v2/type/10002/"
+{
+  "count": 20,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      name: "normal"
+      url: "https://pokeapi.co/api/v2/type/1/"
+    },
+    {
+      name: "fighting"
+      url: "https://pokeapi.co/api/v2/type/2/"
+    },
+    {
+      "name": "flying",
+      "url": "https://pokeapi.co/api/v2/type/3/"
+    }
+  ]
+}
 ```
+**Obviamente la API te va devolver más de tres tipos de Pokemon, yo lo hago así a modo de ejemplo.**
 
-**`GET`** https://pokeapi.co/api/v2/type/`{ID o nombre}`
 
-Hacer una petición de este estilo con un parametro devolvera una lista de Pokemon dependiendo del tipo.
+**`GET`** pokeapi.example/api/v2/type/**{ID o nombre}**
+
+Hacer una petición de este estilo con un parametro devolvera data sobre un Pokemon dependiendo del tipo.
 
 **Example**: Consulta
 - Por ID: https://pokeapi.co/api/v2/type/8
 - Por nombre: https://pokeapi.co/api/v2/type/ghost
 
 ```json
-▶️ damage_relations: {} 6 keys
-▶️ game_indices: [] 6 items
-▶️ generations: {} 2 keys
-id: 8 
-▶️ move_damage_class: {} 2 keys
-▶️ moves: [] 30 items
-name: "ghost"
-▶️ names: [] 10 items
-▶️ past_damage_relations: [] 2 items
-▶️ pokemon: [] 73 items
+{
+  "damage_relations": {},
+  "game_indices": [],
+  "generations": {},
+  "id": 8,
+  "move_damage_class": {},
+  "moves": [],
+  "name": "ghost",
+  "mames": [],
+  "past_damage_relations": [],
+  "pokemon": []
+}
 ```
+**Obviamente la API te va devolver más información, yo lo hago así a modo de ejemplo.**
 
 <h2 align="center">MAY THE DEMO EFFECT BE WITH YOU</h2>
 Si encontraste algo útil en este 🚀proyecto y te aporto valor, 🔗compártelo con todo los 👤terricolas del planeta🌎tierra. Y no olvides seguirme en instagram para más contenido good.
