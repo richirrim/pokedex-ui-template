@@ -170,12 +170,12 @@ Adicionalmente la respuesta de este enpoint ademas de proporcionarnos el nombre 
   "previous": null,
   "results": [
     {
-      name: "normal",
-      url: "https://pokeapi.co/api/v2/type/1/"
+      "name": "normal",
+      "url": "https://pokeapi.co/api/v2/type/1/"
     },
     {
-      name: "fighting",
-      url: "https://pokeapi.co/api/v2/type/2/"
+      "name": "fighting",
+      "url": "https://pokeapi.co/api/v2/type/2/"
     },
     {
       "name": "flying",
