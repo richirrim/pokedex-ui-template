@@ -65,13 +65,13 @@ Y ya, es todo c:
 Sera una estructura muy básica pero organizada.
 
 - **📂 css**: Contiene los estilos del proyecto y el reset para normalizar el css en todos los navegadores y así lograr que nuestro proyecto siempre se vea igual en cualquier navegador.
-  - **📄 normalize.css**: Normaliza los estilos en todos los navegadores.
-  - **📄 style.css**:  Nuestros estilos.
+  - **📄 normalize.css**: Normaliza los estilos en todos los navegadores.
+  - **📄 style.css**:  Nuestros estilos.
 - **📂 images**: Contiene todas las imágenes del proyecto como logos, banners, etc.
-  - **📂 icons**: Aquí encontrarás todos los iconos para este proyecto y también los favicon.  
-  - *📂 README*: Esta carpeta ignórala, la uso para guardar imágenes que sirven para documentar el proyecto.
+  - **📂 icons**: Aquí encontrarás todos los iconos para este proyecto y también los favicon.  
+  - *📂 README*: Esta carpeta ignórala, la uso para guardar imágenes que sirven para documentar el proyecto.
 - **📂 js**: Contiene código JavaScript y es donde haremos las peticiones a la API.
-  - **📄 script.js**
+  - **📄 script.js**
 - **📄 Index.html**: Contiene la estructura HTML de nuestra Landing Page.
 - **📄 README**: Contiene la documentación que estás leyendo.
 
