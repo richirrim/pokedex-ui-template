@@ -34,7 +34,7 @@ Lo primero que debes de hacer es ir al repositorio del proyecto llamado [pokedex
 
 Ahora abre un terminal en la ubicación donde guardes todos tus proyectos web y tipea el sig. comando: `git clone https://github.com/richirrim/pokedex-ui-template`.
 
-<!--  Aquí va ir un gif -->
+![gif - git clone](images/README/git-clone.gif)
 
 Y listo tendrás una copia de este proyecto en tu máquina local. Ahora, sin miedo al éxito, puedes empezar a modificarlo a tu gusto.
 
@@ -42,8 +42,6 @@ Y listo tendrás una copia de este proyecto en tu máquina local. Ahora, sin mie
 
 ### 2. Haciendo Fork y clonando el repositorio
 Ahora, si eres un developer good, lo ideal seria que hicieras un Fork del proyecto y luego hicieras un git clone a ese Fork.
-
-<!--  Aquí va ir un gif -->
 ### 3. Descargando el proyecto en un archivo ZIP
 Ojito, los comando anteriores solo los puedes utilizar  si tienes una cuenta en Github, Git instalado y configurado en tu PC. Ahora, si aún no estás usando Git, es buen momento para decirte que es una herramienta que se va a volver tu pan de cada día como Web Developer. Aparte es una skill muy solicitada por las empresas y que aporta un gran valor a tu perfil profesional. 
 
@@ -51,7 +49,7 @@ Pero para no hacer mucho lío, te puedes descargar el proyecto sin necesidad de 
 
 Solo sigue lo sig. pasos y podrás descargar todo el proyecto en formato ZIP.
 
-<!--  Aquí va ir un gif -->
+![Gif - tutorial de como descargar proyecto en un archivo zip](images/README/git-zip.gif)
 
 ## ⚙️ HERRAMIENTAS QUE USAREMOS EN ESTE PROYECTO
 
@@ -212,4 +210,7 @@ Hacer una petición de este estilo con un parametro devolvera data sobre un Poke
 **Obviamente la API te va devolver más información, yo lo hago así a modo de ejemplo.**
 
 <h2 align="center">MAY THE DEMO EFFECT BE WITH YOU</h2>
+
+<p align="center">
 Si encontraste algo útil en este 🚀proyecto y te aporto valor, 🔗compártelo con todo los 👤terricolas del planeta🌎tierra. Y no olvides seguirme en instagram para más contenido good.
+</p>
